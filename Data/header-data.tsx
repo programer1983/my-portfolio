@@ -19,11 +19,6 @@ export const headerData: HeaderItem[] = [
   },
   {
     name: "Контакти",
-    path: "#contact",
+    path: "#contacts",
   },
-  // {
-  //   name: "Контакти",
-  //   path: "/contacts",
-  //   className: "header__link--contacts",
-  // },
 ];

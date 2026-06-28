@@ -49,7 +49,7 @@ const Contacts = () => {
   };
 
   return (
-    <section className="contacts" id="contact">
+    <section className="contacts" id="contacts">
       <div className="container">
         <h2 className="contacts__title title" data-aos="fade-up">
           Напишіть мені
