@@ -25,10 +25,10 @@ const Contacts = () => {
 
     emailjs
       .sendForm(
-        "service_zggnhtm",
-        "template_neckv1k",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
         form.current,
-        "user_RyWBgBRflyUzGSWbQ6rhV",
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "",
       )
       .then(
         (result) => {
