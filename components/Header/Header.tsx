@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react"; // Добавили useRef
 import { headerData } from "../../Data/header-data";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import "./Header.scss";
@@ -10,15 +10,20 @@ export interface HeaderItem {
   path: string;
   className?: string;
 }
+
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false);
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
+  const isScrollingToAnchor = useRef(false);
+
   const toggleMenu = () => setActiveMenu(!activeMenu);
 
   useEffect(() => {
     const handleScroll = () => {
+      if (isScrollingToAnchor.current) return;
+
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
@@ -29,7 +34,7 @@ const Header = () => {
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -40,12 +45,20 @@ const Header = () => {
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
+      isScrollingToAnchor.current = true;
+
       targetElement.scrollIntoView({ behavior: "smooth" });
+
       history.replaceState(
         null,
         "",
         window.location.pathname + window.location.search,
       );
+
+      setTimeout(() => {
+        isScrollingToAnchor.current = false;
+        setLastScrollY(window.scrollY);
+      }, 1000);
     }
 
     setActiveMenu(false);
