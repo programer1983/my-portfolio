@@ -1,4 +1,6 @@
-export const headerData = [
+import { HeaderItem } from "../components/Header/Header";
+
+export const headerData: HeaderItem[] = [
   {
     name: "Головна",
     path: "#home",

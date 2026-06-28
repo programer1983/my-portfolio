@@ -5,6 +5,11 @@ import { headerData } from "../../Data/header-data";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import "./Header.scss";
 
+export interface HeaderItem {
+  name: string;
+  path: string;
+  className?: string;
+}
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false);
   const [show, setShow] = useState(true);
