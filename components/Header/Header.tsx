@@ -30,12 +30,12 @@ const Header = () => {
     };
   }, [lastScrollY]);
 
-  const handleLinkClick = (path) => {
+  const handleLinkClick = (path: string) => {
     const targetId = path.replace("#", "");
-    const targetEliment = document.getElementById(targetId);
+    const targetElement = document.getElementById(targetId);
 
-    if (targetEliment) {
-      targetEliment.scrollIntoView({ behavior: "smooth" });
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
       history.replaceState(
         null,
         "",
@@ -44,7 +44,7 @@ const Header = () => {
     }
 
     setActiveMenu(false);
-  }; 
+  };
 
   return (
     <>
