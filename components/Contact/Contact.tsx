@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import "./contacts.scss";
+import "./Contact.scss";
 import { useEffect, useRef, useState, FormEvent } from "react"; // Добавили FormEvent
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -53,12 +53,6 @@ const Contacts = () => {
   return (
     <section className="contacts">
       <div className="container">
-        <button
-          className="contacts__backbutton"
-          onClick={() => router.push("/")}
-        >
-          To Home
-        </button>
         <h2 className="contacts__title title" data-aos="fade-up">
           Напишіть мені
         </h2>
