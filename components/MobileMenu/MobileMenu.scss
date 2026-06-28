@@ -1,0 +1,45 @@
+.mobile__menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.mobile__menu-active {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  transition: 0.5s ease;
+  overflow-y: auto;
+}
+
+.mobile__menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3.4375rem;
+  padding: 9.375rem 0 1.875rem 0;
+}
+
+.mobile__menu-link {
+  color: var(--whiteColor);
+  font-size: 1.875rem;
+}
