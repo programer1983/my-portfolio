@@ -19,7 +19,7 @@ export const headerData: HeaderItem[] = [
   },
   {
     name: "Контакти",
-    path: "#contacts",
+    path: "#contact",
   },
   // {
   //   name: "Контакти",
