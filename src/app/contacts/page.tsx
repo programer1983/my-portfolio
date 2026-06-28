@@ -2,16 +2,16 @@
 
 import { useRouter } from "next/navigation";
 import "./contacts.scss";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, FormEvent } from "react"; // Добавили FormEvent
 import AOS from "aos";
 import "aos/dist/aos.css";
 import emailjs from "emailjs-com";
 
 const Contacts = () => {
   const router = useRouter();
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
   const [isSent, setIsSent] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     AOS.init({
@@ -20,8 +20,10 @@ const Contacts = () => {
     });
   }, []);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!form.current) return;
 
     emailjs
       .sendForm(
@@ -34,7 +36,8 @@ const Contacts = () => {
         (result) => {
           console.log(result.text);
           setIsSent(true);
-          form.current.reset();
+
+          form.current?.reset();
 
           setTimeout(() => {
             setIsSent(false);
