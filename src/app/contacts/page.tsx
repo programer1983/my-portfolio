@@ -5,11 +5,9 @@ import "./contacts.scss";
 import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import emailjs from "emailjs-com";
-import { p } from "framer-motion/client";
 
-const page = () => {
+const Contacts = () => {
   const router = useRouter();
   const form = useRef();
   const [isSent, setIsSent] = useState(false);
@@ -30,7 +28,7 @@ const page = () => {
         "service_zggnhtm",
         "template_neckv1k",
         form.current,
-        "user_RyWBgBRflyUzGSWbQ6rhV"
+        "user_RyWBgBRflyUzGSWbQ6rhV",
       )
       .then(
         (result) => {
@@ -45,7 +43,7 @@ const page = () => {
         (error) => {
           console.error(error.text);
           setError("Помилка при відправці.");
-        }
+        },
       );
   };
 
@@ -126,4 +124,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Contacts;
