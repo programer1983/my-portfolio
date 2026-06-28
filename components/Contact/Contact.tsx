@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import "./Contact.scss";
 import { useEffect, useRef, useState, FormEvent } from "react"; // Добавили FormEvent
 import AOS from "aos";
@@ -8,7 +7,6 @@ import "aos/dist/aos.css";
 import emailjs from "emailjs-com";
 
 const Contacts = () => {
-  const router = useRouter();
   const form = useRef<HTMLFormElement>(null);
   const [isSent, setIsSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
