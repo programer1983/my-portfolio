@@ -7,14 +7,11 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer__inner">
-          <motion.div
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          >
+          <div>
             <Link href="/contacts" className="footer__content">
               mitucha1983@gmail.com
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
     </footer>
