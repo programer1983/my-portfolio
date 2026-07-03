@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { scillstData } from "../../Data/scillstData";
 import "./Scills.scss";
+import { motion } from "framer-motion";
 
 const Scills = () => {
   return (
@@ -9,12 +10,22 @@ const Scills = () => {
         <h2 className="scills__title title">Мої технології</h2>
         <ul className="scills__list">
           {scillstData.map((data, index) => (
-            <li
+            <motion.li
               className="scills__list-item"
               key={data.id}
-              data-aos="fade-right"
-              data-aos-anchor-placement="top-center"
-              data-aos-delay={`${index * 100}`}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{
+                once: true,
+                amount: 0.3,
+                margin: "0px 0px 100px 0px",
+              }}
+              transition={{
+                type: "tween",
+                duration: 0.7,
+                ease: "easeOut",
+                delay: index * 0.1,
+              }}
             >
               <Image
                 src={data.src}
@@ -24,7 +35,7 @@ const Scills = () => {
                 className="scills__list-image"
               />
               <h3 className="scills__list-name">{data.name}</h3>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>

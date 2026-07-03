@@ -1,4 +1,3 @@
-import Link from "next/link";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -7,9 +6,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer__inner">
           <div>
-            <Link href="/contacts" className="footer__content">
-              mitucha1983@gmail.com
-            </Link>
+            <div className="footer__content">mitucha1983@gmail.com</div>
           </div>
         </div>
       </div>
