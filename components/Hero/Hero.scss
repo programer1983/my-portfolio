@@ -39,6 +39,9 @@
     font-size: 3.125rem;
     margin-bottom: 1.25rem;
   }
+  @media (max-width: 500px) {
+    font-size: 2.5rem;
+  }
 }
 
 .hero__text {
@@ -49,5 +52,8 @@
   text-align: center;
   @media (max-width: 800px) {
     font-size: 1.5625rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 1.25rem;
   }
 }

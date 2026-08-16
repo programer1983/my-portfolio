@@ -9,14 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "aos": "^3.0.0-beta.6",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.16.0",
+    "lucide": "^1.31.0",
+    "lucide-react": "^1.31.0",
     "motion": "^12.5.0",
     "next": "^16.2.9",
+    "postcss": "^8.5.26",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "sass": "^1.101.0"
+    "sass": "^1.101.0",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -24,6 +29,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "daisyui": "^5.7.17",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
     "typescript": "^5"

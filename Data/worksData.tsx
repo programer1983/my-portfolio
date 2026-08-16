@@ -1,5 +1,11 @@
 export const workstData = [
   {
+    id: "25",
+    src: "/images/Works/work-25.jpg",
+    text: "Професійний великий інтернет-магазин на Next.js, Hono.js, Drizzle ORM, Neon",
+    path: "https://next-hono-drizzle-ecommerce-aenl-neon.vercel.app/#orders",
+  },
+  {
     id: "1",
     src: "/images/Works/work-24.jpg",
     text: "Професійний блог-магазин на Next.js, Hono.js, Drizzle ORM, Neon",
@@ -10,7 +16,7 @@ export const workstData = [
     id: "2",
     src: "/images/Works/work-23.jpg",
     text: "Додаток по пошуку роботы на Next.js, Hono.js, Drizzle ORM, Neon",
-    path: "https://next-drizzle-neon-finde-job-blog-42o4-5qbrrqhm7.vercel.app/",
+    path: "https://next-drizzle-neon-finde-job-blog-42.vercel.app/",
   },
 
   {
@@ -26,17 +32,14 @@ export const workstData = [
     path: "https://next-js-games-so7f.vercel.app/",
   },
   {
-    id: "5",
-    src: "/images/Works/work-3.jpg",
-    text: "Сайт з реклами пристроїв для віртуальної реальності на scss js",
-    path: "https://layout-vr.vercel.app/",
-  },
-  {
     id: "6",
     src: "/images/Works/work-4.jpg",
     text: "Додаток з замовлення туристичних турів на Next.js",
     path: "https://next-js-journey-axbp59qrf-programer1983s-projects.vercel.app/",
   },
+];
+
+export const worksDataPage = [
   {
     id: "7",
     src: "/images/Works/work-5.jpg",
@@ -48,6 +51,12 @@ export const workstData = [
     src: "/images/Works/work-10.jpg",
     text: "Iнтернет магазин на Next.js",
     path: "https://next-ecommerc-local-storage-c8z6was1q-programer1983s-projects.vercel.app/",
+  },
+  {
+    id: "5",
+    src: "/images/Works/work-3.jpg",
+    text: "Сайт з реклами пристроїв для віртуальної реальності на scss js",
+    path: "https://layout-vr.vercel.app/",
   },
   {
     id: "10",

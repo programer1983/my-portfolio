@@ -54,3 +54,48 @@
   margin: 0 auto;
   line-height: 1.2;
 }
+
+.works_button {
+  display: flex;
+  background-color: rgb(233, 140, 10);
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.625rem;
+  padding: 0.4375rem 0.75rem;
+  will-change: transform;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  span {
+    color: white;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+  .works_button-iconbg {
+    background-color: rgb(195, 117, 16);
+    padding: 0.4375rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .works_button-icon {
+    color: white;
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+  @media (max-width: 700px) {
+    padding: 0.3125rem 0.5rem;
+
+    span {
+      font-size: 0.9375rem;
+    }
+    .works_button-icon {
+      width: 0.75rem;
+      height: 0.75rem;
+    }
+  }
+}

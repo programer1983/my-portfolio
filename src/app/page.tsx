@@ -8,9 +8,9 @@ import Works from "../../components/Works/Works";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Contact from "../../components/Contact/Contact";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import Contact from "../../components/Contact/Contact";
 
 export default function Home() {
   useEffect(() => {
@@ -32,13 +32,11 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
-        <Hero />
-        <About />
-        <Scills />
-        <Works />
-        <Contact />
-      </main>
+      <Hero />
+      <About />
+      <Scills />
+      <Works />
+      <Contact />
       <Footer />
     </>
   );

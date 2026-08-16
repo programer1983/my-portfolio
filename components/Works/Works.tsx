@@ -4,6 +4,8 @@ import Image from "next/image";
 import { workstData } from "../../Data/worksData";
 import "./Works.scss";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { Navigation } from "lucide-react";
 
 const Works = () => {
   const cardVariants = {
@@ -33,7 +35,7 @@ const Works = () => {
                 viewport={{ once: true, amount: 0.05 }}
                 variants={cardVariants}
               >
-                <a href={data.path} className="works__link">
+                <a href={data.path} className="works__link" target="_blank">
                   <div className="works__card">
                     <div className="works__card-img">
                       <Image
@@ -49,6 +51,14 @@ const Works = () => {
               </motion.article>
             );
           })}
+          <Link href="/works">
+            <button type="button" className="works_button">
+              <span>Більше моїх робіт</span>
+              <div className="works_button-iconbg">
+                <Navigation className="works_button-icon" />
+              </div>
+            </button>
+          </Link>
         </div>
       </div>
     </section>
