@@ -12,21 +12,28 @@ const About = () => {
             src="/images/About/abaut-image.jpg"
             alt="about-image"
             width={550}
-            height={300}
+            height={500}
             className="about__image"
             data-aos="fade-right"
             data-aos-duration="1500"
           />
           <div className="about__info">
             {aboutData.map((data, i) => (
-              <p
+              <div
                 className="about__desc"
                 key={data.id}
                 data-aos="fade-up"
                 data-aos-delay={`${i * 100}`}
               >
-                {data.desc}
-              </p>
+                <p className="about__desc-text">{data.desc}</p>
+                <div
+                  style={{
+                    width: "100%",
+                    height: "1px",
+                    backgroundColor: "rgb(249, 115, 22)",
+                  }}
+                />
+              </div>
             ))}
           </div>
         </div>

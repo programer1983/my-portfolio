@@ -1,13 +1,13 @@
 export const scillstData = [
   {
     id: "1",
-    src: "/images/Scills/css.png",
-    name: "css",
+    src: "/images/Scills/sass1.png",
+    name: "scss",
   },
   {
     id: "2",
-    src: "/images/Scills/js.png",
-    name: "js",
+    src: "/images/Scills/typescript.png",
+    name: "TypeScript",
   },
   {
     id: "3",
@@ -27,7 +27,7 @@ export const scillstData = [
   {
     id: "6",
     src: "/images/Scills/hono.png",
-    name: "hono js backend",
+    name: "hono.js",
   },
   {
     id: "7",
@@ -37,6 +37,6 @@ export const scillstData = [
   {
     id: "8",
     src: "/images/Scills/neon.png",
-    name: "neon data base cloud postgresql",
+    name: "neon",
   },
 ];

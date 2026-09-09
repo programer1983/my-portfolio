@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.534);
+  background-color: rgba(0, 0, 0, 0.634);
   width: 100%;
   padding: 0.9375rem 0;
   z-index: 2;
@@ -38,30 +38,15 @@
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s ease;
   &:hover {
-    border-color: var(--whiteColor);
+    border-color: rgb(249, 115, 22);
   }
 }
 
 .header__link {
-  color: var(--whiteColor);
+  color: rgb(249, 115, 22);
   font-size: 1.25rem;
   font-weight: 600;
   font-family: var(--montseratFont);
-}
-
-.header__link--contacts {
-  background-color: rgb(255, 170, 0);
-  border-radius: 20px;
-  padding: 0.8125rem 1.25rem;
-  transition: transform 0.3s ease-in-out;
-  a {
-    color: rgb(27, 111, 27);
-    font-size: 1.125rem;
-    font-weight: 600;
-  }
-  &:hover {
-    transform: scale(1.1);
-  }
 }
 
 .header__burger {

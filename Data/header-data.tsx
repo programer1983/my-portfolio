@@ -14,7 +14,7 @@ export const headerData: HeaderItem[] = [
     path: "#scills",
   },
   {
-    name: "Мої роботи",
+    name: "Мої проєкти",
     path: "#works",
   },
   {

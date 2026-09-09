@@ -3,6 +3,70 @@
   padding-top: 4.375rem;
 }
 
+.workspage {
+  &__topblock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.875rem;
+  }
+
+  &__search {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+    margin-top: 24px;
+
+    &::placeholder {
+      color: #888;
+    }
+
+    &:focus {
+      border-color: #f97316;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0 32px;
+    flex-wrap: wrap;
+  }
+
+  &__tab {
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    &--active {
+      background: #f97316;
+      color: #fff;
+    }
+  }
+
+  &__empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #888;
+    padding: 40px 0;
+  }
+}
+
 .workspage_button {
   display: flex;
   background-color: rgb(233, 140, 10);

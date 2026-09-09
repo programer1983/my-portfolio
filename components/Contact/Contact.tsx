@@ -69,6 +69,8 @@ const Contacts = () => {
               id="name"
               name="user_name"
               required
+              placeholder="name"
+              autoComplete="off"
             />
           </div>
           <div
@@ -85,6 +87,7 @@ const Contacts = () => {
               id="email"
               name="user_email"
               required
+              placeholder="example@mail.com"
             />
           </div>
           <div
@@ -100,6 +103,7 @@ const Contacts = () => {
               id="text"
               name="message"
               required
+              placeholder="text"
             ></textarea>
             <button className="contacts__form-button" type="submit">
               Надіслати
