@@ -6,7 +6,7 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: gray;
+  background-color: rgb(23, 23, 23);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: gray;
+  background-color: rgb(23, 23, 23);
   display: flex;
   justify-content: center;
   z-index: 1;
@@ -35,11 +35,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 3.4375rem;
-  padding: 9.375rem 0 1.875rem 0;
+  justify-content: center;
+  row-gap: 5rem;
+  // padding: 9.375rem 0 1.875rem 0;
+  @media (max-width: 700px) {
+    // row-gap: 3rem;
+  }
 }
 
 .mobile__menu-link {
-  color: var(--whiteColor);
-  font-size: 1.875rem;
+  color: rgb(249, 115, 22);
+  font-size: 3.125rem;
+  @media (max-width: 700px) {
+    font-size: 1.875rem;
+  }
 }

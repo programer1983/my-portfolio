@@ -63,7 +63,7 @@
   }
 }
 .header__burger span {
-  background-color: var(--whiteColor);
+  background-color: rgb(249, 115, 22);
   width: 70%;
   height: 2px;
   transform: scale(1);
@@ -72,7 +72,7 @@
 .header__burger::before,
 .header__burger::after {
   content: "";
-  background-color: var(--whiteColor);
+  background-color: rgb(249, 115, 22);
   width: 70%;
   height: 2px;
   position: absolute;

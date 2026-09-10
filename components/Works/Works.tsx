@@ -51,15 +51,15 @@ const Works = () => {
               </motion.article>
             );
           })}
-          <Link href="/works">
-            <button type="button" className="works_button">
-              <span>Більше моїх робіт</span>
-              <div className="works_button-iconbg">
-                <Navigation className="works_button-icon" />
-              </div>
-            </button>
-          </Link>
         </div>
+        <Link href="/works">
+          <button type="button" className="works_button">
+            <span>Більше моїх робіт</span>
+            <div className="works_button-iconbg">
+              <Navigation className="works_button-icon" />
+            </div>
+          </button>
+        </Link>
       </div>
     </section>
   );

@@ -40,6 +40,18 @@ const Header = () => {
     };
   }, [lastScrollY]);
 
+  useEffect(() => {
+    if (activeMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [activeMenu]);
+
   const handleLinkClick = (path: string) => {
     const targetId = path.replace("#", "");
     const targetElement = document.getElementById(targetId);
@@ -67,7 +79,7 @@ const Header = () => {
   return (
     <>
       <MobileMenu activeMenu={activeMenu} toggleMenu={toggleMenu} />
-      <header className={`header ${!show ? "hidden" : ""}`}>
+      <header className={`header ${!show && !activeMenu ? "hidden" : ""}`}>
         <div className="container">
           <div className="header__inner">
             <ul className="header__list">

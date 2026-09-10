@@ -8,6 +8,7 @@
   column-gap: 1.25rem;
   row-gap: 2.5rem;
   justify-content: center;
+  margin-bottom: 5rem;
   @media (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -17,6 +18,12 @@
 }
 
 .works__item {
+  @media (max-width: 767.99px) {
+    &:not(:last-child) {
+      padding-bottom: 1.875rem;
+      border-bottom: 1px solid rgb(249, 115, 22);
+    }
+  }
 }
 
 .works__link {
