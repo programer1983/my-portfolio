@@ -2,6 +2,10 @@
   scroll-margin-top: 100px;
 }
 
+.works__title {
+  color: rgb(249, 115, 22);
+}
+
 .works__items {
   display: grid;
   grid-template-columns: repeat(3, 370px);

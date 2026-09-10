@@ -16,12 +16,12 @@ export const scillstData = [
   },
   {
     id: "4",
-    src: "/images/Scills/react.jpg",
+    src: "/images/Scills/react1.png",
     name: "react",
   },
   {
     id: "5",
-    src: "/images/Scills/next.png",
+    src: "/images/Scills/next1.png",
     name: "next.js",
   },
   {
