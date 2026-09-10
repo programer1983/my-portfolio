@@ -14,7 +14,7 @@ const Works = () => {
       opacity: 1,
       rotateY: 0,
       transition: {
-        duration: 0.6,
+        duration: 1.2,
         ease: "easeOut",
       },
     },
@@ -32,7 +32,7 @@ const Works = () => {
                 key={data.id}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.05 }}
+                viewport={{ amount: 0.05 }}
                 variants={cardVariants}
               >
                 <a href={data.path} className="works__link" target="_blank">
@@ -52,14 +52,16 @@ const Works = () => {
             );
           })}
         </div>
-        <Link href="/works">
-          <button type="button" className="works_button">
-            <span>Більше моїх робіт</span>
-            <div className="works_button-iconbg">
-              <Navigation className="works_button-icon" />
-            </div>
-          </button>
-        </Link>
+        <div className="works_link">
+          <Link href="/works">
+            <button type="button" className="works_button">
+              <span>Більше моїх робіт</span>
+              <div className="works_button-iconbg">
+                <Navigation className="works_button-icon" />
+              </div>
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   );

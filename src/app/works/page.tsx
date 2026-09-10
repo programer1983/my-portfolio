@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import { worksDataPage } from "./../../../Data/worksData";
 import "./works.scss";
@@ -19,13 +19,19 @@ const WorkspagePage = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
 
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }, 0);
+  }, []);
+
   const cardVariants = {
     hidden: { opacity: 0, rotateY: 90 },
     visible: {
       opacity: 1,
       rotateY: 0,
       transition: {
-        duration: 0.6,
+        duration: 1.2,
         ease: "easeOut",
       },
     },
@@ -88,7 +94,7 @@ const WorkspagePage = () => {
                   key={data.id}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, amount: 0.05 }}
+                  viewport={{ amount: 0.05 }}
                   variants={cardVariants}
                 >
                   <a
