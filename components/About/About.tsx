@@ -9,7 +9,7 @@ const About = () => {
         <h2 className="about__title title">Про мене</h2>
         <div className="about__content">
           <Image
-            src="/images/About/abaut-image.jpg"
+            src="/images/About/about-img.jpg"
             alt="about-image"
             width={550}
             height={500}
