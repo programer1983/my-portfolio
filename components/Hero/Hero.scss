@@ -15,11 +15,11 @@
   position: relative;
   overflow: hidden;
   @media (max-width: 800px) {
-    height: 550px;
+    height: 100vh;
   }
-  @media (max-width: 500px) {
-    height: 500px;
-  }
+  // @media (max-width: 500px) {
+  //   height: 500px;
+  // }
 }
 
 .hero__content {
@@ -27,14 +27,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  // background-color: rgba(0, 0, 0, 0.493);
-
-  // background-color: rgba(15, 23, 42, 0.45);
-  // backdrop-filter: blur(20px);
-  // -webkit-backdrop-filter: blur(20px);
-  // border: 1px solid rgba(255, 255, 255, 0.08);
-  // box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-
   padding: 2.8125rem 1.875rem;
   border-radius: 1.25rem;
   width: 75rem;
