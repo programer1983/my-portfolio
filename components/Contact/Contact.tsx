@@ -1,10 +1,9 @@
 "use client";
 
 import "./Contact.scss";
-import { useEffect, useRef, useState, FormEvent } from "react"; // Добавили FormEvent
+import { useEffect, useRef, useState, FormEvent } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import emailjs from "emailjs-com";
 
 const Contacts = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -18,34 +17,45 @@ const Contacts = () => {
     });
   }, []);
 
-  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     if (!form.current) return;
 
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
-        form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "",
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setIsSent(true);
+    setError(null);
+    setIsSent(false);
 
-          form.current?.reset();
+    const formData = new FormData(form.current);
+    const payload = {
+      user_name: formData.get("user_name"),
+      user_email: formData.get("user_email"),
+      message: formData.get("message"),
+    };
 
-          setTimeout(() => {
-            setIsSent(false);
-          }, 5000);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        (error) => {
-          console.error(error.text);
-          setError("Помилка при відправці.");
-        },
-      );
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSent(true);
+        form.current.reset();
+
+        setTimeout(() => {
+          setIsSent(false);
+        }, 5000);
+      } else {
+        setError(result.error || "Помилка при відправці.");
+      }
+    } catch (err) {
+      console.error("Помилка з'єднання з сервером:", err);
+      setError("Не вдалося зв'язатися з сервером.");
+    }
   };
 
   return (
@@ -112,11 +122,11 @@ const Contacts = () => {
         </form>
         <div className="contacts__messages">
           {isSent && (
-            <p style={{ color: "rgb(255, 170, 0)", fontSize: "30px" }}>
+            <p className="contacts__messages-success">
               Повідомлення відправленно!
             </p>
           )}
-          {error && <p style={{ color: "red" }}>{error}</p>}
+          {error && <p className="contacts__messages-error">{error}</p>}
         </div>
       </div>
     </section>
