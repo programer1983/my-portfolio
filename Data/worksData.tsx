@@ -38,7 +38,7 @@ export const worksDataPage = [
     id: "4",
     src: "/images/Works/work-0.jpg",
     text: "Каталог ігор з пошуком через зовнішнє API — Next.js",
-    path: "https://next-js-games-95bxahqk1-programer1983s-projects.vercel.app/",
+    path: "https://next-js-games-25hdziylc-programer1983s-projects.vercel.app/",
     category: "react",
   },
   {
