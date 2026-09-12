@@ -38,7 +38,7 @@ export const worksDataPage = [
     id: "4",
     src: "/images/Works/work-0.jpg",
     text: "Каталог ігор з пошуком через зовнішнє API — Next.js",
-    path: "https://next-js-games-so7f.vercel.app/",
+    path: "https://next-js-games.vercel.app/",
     category: "react",
   },
   {
@@ -127,10 +127,10 @@ export const worksDataPage = [
   },
   {
     id: "20",
-    src: "/images/Works/work-18.jpg",
-    text: "Пошук фільмів та серіалів через API — React",
-    path: "https://react-tv-api-search-app.vercel.app/",
-    category: "react",
+    src: "/images/Works/work-26.jpg",
+    text: "Лендінг фінансово-консалтингові рішення - SCSS JS",
+    path: "https://layout-finance-and-consultancy-solution-umber.vercel.app/",
+    category: "scss",
   },
   {
     id: "21",
@@ -140,11 +140,25 @@ export const worksDataPage = [
     category: "scss",
   },
   {
-    id: "22",
-    src: "/images/Works/work-20.jpg",
-    text: "Сайт замовлення фастфуду — SCSS, JS",
-    path: "https://layout-food-every-time.vercel.app/",
+    id: "27",
+    src: "/images/Works/work-19.jpg",
+    text: "Рекламний лендинг одягового бренду — SCSS, JS",
+    path: "https://leaut-fashion-lending.vercel.app/",
     category: "scss",
+  },
+  {
+    id: "22",
+    src: "/images/Works/work-27.jpg",
+    text: "Лендінг колекція - магазин брендових годинників — SCSS, JS",
+    path: "https://layout-watch-collection.vercel.app/",
+    category: "scss",
+  },
+  {
+    id: "28",
+    src: "/images/Works/work-30.jpg",
+    text: "Лендінг порфоліо вєб розробника і дизайнера — Next.js",
+    path: "https://next-agency-app-eb7d.vercel.app/#main",
+    category: "react",
   },
   {
     id: "23",
